@@ -78,6 +78,7 @@ const router = new Router({
 })
 // 前置守卫
 router.beforeEach((to, from, next) =>{
+  // 这里的meta就是上面路由配的meta
   document.title = to.matched[0].meta.title
   // console.log('before');
   next()
